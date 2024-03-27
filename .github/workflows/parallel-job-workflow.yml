@@ -66,6 +66,12 @@ jobs:
       - name: Print a message for non-main branches
         if: github.ref != 'refs/heads/main'
         run: echo "This is not the main branch."
+      
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Print a npm install Success Message
+        run: echo "npm installed.. Hurray."
 
       - name: Run tests
         run: npm test
